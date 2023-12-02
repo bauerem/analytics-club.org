@@ -1,17 +1,18 @@
 import LightFooterE from '@/components/footer'
 import LightHeaderA from '@/components/header'
 import LightHeroA from '@/components/hero'
+import LightBlogD from '@/components/jobs'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
-export default function Home() {
+export default function Jobs() {
   return (
     <div>
       <LightHeaderA />
 
       <main className="flex min-h-screen flex-col items-center justify-between py-24 px-20">
 
-        <LightHeroA />
+        <LightBlogD />
 
       </main>
 
