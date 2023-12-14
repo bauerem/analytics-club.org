@@ -1,4 +1,4 @@
-import LightContentA from '@/components/content'
+import DarkContentH from '@/components/content'
 import LightFooterE from '@/components/footer'
 import LightHeaderA from '@/components/header'
 import LightHeroA from '@/components/hero'
@@ -12,7 +12,7 @@ export default function About() {
 
       <main className="flex min-h-screen flex-col items-center justify-between py-24 px-20">
 
-        <LightContentA />
+        <DarkContentH />
 
       </main>
 

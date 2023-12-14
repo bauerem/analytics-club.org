@@ -11,6 +11,7 @@ module.exports = {
     fontSize: {
       'base': '1.5rem',
       'xl': '2rem',
+      '2xl': '2.5rem',
       '3xl': '3rem',
       '4xl': '4rem'
     },
@@ -23,7 +24,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'primary': '#614BC3',
+        'primary': '#01001a',
         'secondary': '#33BBC5',
         'tertiary': '#85E6C5',
         'quartary': '#C8FFE0'

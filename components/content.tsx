@@ -1,138 +1,89 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Image from "next/image";
 
-function Details(props: any) {
+
+function Content({ title, about, img_url, theme }: any) {
     return (
-        <>
-            <div className="flex flex-wrap">
-                <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                    <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-                        Shooting Stars
-                    </h2>
-                    <p className="leading-relaxed text-base mb-4">
-                        Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                        hexagon disrupt edison bulbche.
-                    </p>
-                    <a href="" className={`text-primary inline-flex items-center`}>
-                        Learn More
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            className="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-                <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                    <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-                        The Catalyzer
-                    </h2>
-                    <p className="leading-relaxed text-base mb-4">
-                        Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                        hexagon disrupt edison bulbche.
-                    </p>
-                    <a href="" className={`text-primary inline-flex items-center`}>
-                        Learn More
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            className="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-                <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                    <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-                        Neptune
-                    </h2>
-                    <p className="leading-relaxed text-base mb-4">
-                        Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                        hexagon disrupt edison bulbche.
-                    </p>
-                    <a href="" className={`text-primary inline-flex items-center`}>
-                        Learn More
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            className="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-                <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                    <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-                        Melanchole
-                    </h2>
-                    <p className="leading-relaxed text-base mb-4">
-                        Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                        hexagon disrupt edison bulbche.
-                    </p>
-                    <a href="" className={`text-primary inline-flex items-center`}>
-                        Learn More
-                        <svg
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            className="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
+        <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
+            <div className="rounded-lg h-64 overflow-hidden">
+                <Image
+                    alt="content"
+                    src={img_url}
+                    width={1204}
+                    height={504}
+                />
             </div>
-            <button className={`flex mx-auto mt-16 text-white bg-primary border-0 py-2 px-8 focus:outline-none hover:bg-primary rounded text-lg`}>
-                Button
-            </button>
-        </>
+            <h2 className="text-xl font-medium title-font text-white mt-5">
+                {title}
+            </h2>
+            <p className="text-base leading-relaxed mt-2">
+                {about}
+            </p>
+            <a href="" className={`text-${theme}-400 inline-flex items-center mt-3`}>
+                Learn More
+                <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
     )
 }
 
-function LightContentA(props: any) {
+
+function DarkContentH(props: any) {
+    const status = false;
     return (
-        <section className="text-gray-600 body-font">
+        <section className="text-gray-400 body-font">
             <div className="container px-5 py-24 mx-auto">
-                <div className="flex flex-col text-center w-full mb-20">
-                    <h2 className={`text-xs text-primary tracking-widest font-medium title-font mb-1`}>
-                        OUR MISSION
-                    </h2>
-                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-                        Make Beautiful Interior Designs Easy
-                    </h1>
-                    <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                        Our mission is to make the creation of beautiful interior designs easy and accessible.
-                        We aim to make the selection process for suitable decoration and furniture easy by leveraging artificial intelligence.
-                    </p>
+                <div className="flex flex-col">
+                    {
+                        status
+                            ?
+                            (
+                                <div className="h-1 bg-gray-800 rounded overflow-hidden">
+                                    <div className={`w-24 h-full bg-${props.theme}-500`}></div>
+                                </div>
+                            )
+                            :
+                            (
+                                null
+                            )
+                    }
+                    <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+                        <h1 className="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">
+                            Explore Our Offerings 🦾
+                        </h1>
+                        <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
+                            The Analytics Club offers events in various formats and a number of interest groups in different topics.
+                            So, whatever interests you in data science interests, you are sure to find an event or group in your niche.
+                        </p>
+                    </div>
                 </div>
-                {/* <Details /> */}
+                <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+                    <Content title={"Hackathons"} about={"Explore how we can help you gain experience with our hackathons Data Days and Hack4Good."} img_url={"/hack4good.jpg"} theme={props.theme} />
+                    <Content title={"Events"} about={"Explore our evening events such as our workshops, keynotes, and many other events!"} img_url={"/datadays.jpeg"} theme={props.theme} />
+                    <Content title={"Groups"} about={"Explore our special interest groups such as the Quant Club or the Analytics Club's committees."} img_url={"/quant.jpg"} theme={props.theme} />
+                </div>
             </div>
         </section>
     );
 }
 
-LightContentA.defaultProps = {
+DarkContentH.defaultProps = {
     theme: 'indigo'
 };
 
-LightContentA.propTypes = {
+DarkContentH.propTypes = {
     theme: PropTypes.string.isRequired
 };
 
-export default LightContentA;
+export default DarkContentH;

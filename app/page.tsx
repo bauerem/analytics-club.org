@@ -1,6 +1,9 @@
+import DarkContentH from '@/components/content'
 import LightFooterE from '@/components/footer'
 import LightHeaderA from '@/components/header'
 import LightHeroA from '@/components/hero'
+import DarkPartnersC from '@/components/partners'
+import DarkStatisticC from '@/components/statistic'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
@@ -12,6 +15,9 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-between py-24 px-20">
 
         <LightHeroA />
+        <DarkStatisticC />
+        <DarkContentH />
+        <DarkPartnersC />
 
       </main>
 
