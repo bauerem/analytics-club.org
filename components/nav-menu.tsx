@@ -8,9 +8,9 @@ function NavMenu(props: NavMenuProps) {
     const classes = dropdown ? "flex flex-col" : "";
     return (
         <div className={classes}>
-            <a href={"/about"} className={`mr-5 py-2`}>About</a>
-            <a href={"/jobs"} className={`mr-5 py-2`}>Jobs</a>
-            <a href={"/login"} className={`mr-5 py-2`}>Login</a>
+            <a href={"/hackathons"} className={`mr-5 py-2`}>Hack</a>
+            <a href={"/events"} className={`mr-5 py-2`}>Events</a>
+            <a href={"/groups"} className={`mr-5 py-2`}>Groups</a>
         </div>
     )
 }
